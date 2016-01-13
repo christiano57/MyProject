@@ -1,0 +1,10 @@
+movie class
+	title
+	rating
+
+imdb 
+= []
+
+method 
+
+each movie = movie.new
