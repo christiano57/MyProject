@@ -1,6 +1,6 @@
 require_relative("lib/blog.rb")
 require_relative("lib/post.rb")
-
+require_relative("lib/sponsored_post.rb")
 
 
 post1 = Post.new("ironhack day 1", "Jan 10", "My first day at ironhack was pretty great.")
