@@ -1,7 +1,7 @@
 # Start game method
 # Change room method
-# add room method
-# an array of rooms
+# Add room method
+# An array of rooms
 class Game
 	def initialize
 		@rooms = []
@@ -10,18 +10,19 @@ class Game
 
 	def add_room(single_room)
 		@rooms.push(single_room)
-		
 	end
 
 	def play
 		user_input = ""
+
 		while user_input != @rooms[@current_room].exit
 			@rooms[@current_room].display_description
-			user_input = gets.chomp
+			user_input = gets.chomp.upcase
 		end
 
 		@current_room += 1
 		if @current_room != @rooms.length
-		play
+			play
+		end
 	end
 end

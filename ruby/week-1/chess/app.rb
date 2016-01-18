@@ -33,8 +33,9 @@ white_pawn = Pawn.new(2, 2, "white")
 
 game = Game.new([1, 2, 3, 4, 5, 6, 7, 8], [1, 2, 3, 4, 5, 6, 7, 8])
 
-puts game.move(black_queen, 7, 5)
-puts game.move(black_queen, 1, 6)
+puts game.move?(black_queen, 7, 5)
+puts game.move?(black_queen, 1, 6)
+puts game.move?(black_queen, 9, 4)
 
 
 # puts "\nTesting the Pawn\n"

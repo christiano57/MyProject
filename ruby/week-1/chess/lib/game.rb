@@ -1,12 +1,14 @@
 class Game
+	#should re initilize as a 2 dimensional array
 	def initialize(x, y)
 		@x = x
 		@y = y
+		@pieces = []
 	end
 # create move method to ask game if move is possible
 # find way to incorporate can_move? method from other classes into Game class
 # check lectures
-	def move(piece, dst_x, dst_y)
+	def move?(piece, dst_x, dst_y)
 		if piece.can_move?(dst_x, dst_y) && x_on_board?(dst_x) && y_on_board?(dst_y)
 			true
 		else
