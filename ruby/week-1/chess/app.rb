@@ -3,7 +3,9 @@ require_relative("lib/rook.rb")
 require_relative("lib/bishop.rb")
 require_relative("lib/knight.rb")
 require_relative("lib/queen.rb")
-# require_relative("lib/king.rb")
+require_relative("lib/pawn.rb")
+require_relative("lib/game.rb")
+
 
 black_king = King.new(5, 8, "black")
 white_king = King.new(5, 1, "white")
@@ -26,16 +28,38 @@ black_right_knight = Knight.new(7, 8, "black")
 white_right_knight = Knight.new(2, 1, "white")
 white_left_knight = Knight.new(7, 1, "white")
 
-puts "\nTesting the Queen\n"
-puts "Good Moves"
+black_pawn = Pawn.new(2, 6, "black")
+white_pawn = Pawn.new(2, 2, "white")
 
-p black_queen.can_move?(7, 5)
-p black_queen.can_move?(4, 6)
-puts "Bad Moves"
-p white_queen.can_move?(2, 4)
-p white_queen.can_move?(5, 3)
+game = Game.new([1, 2, 3, 4, 5, 6, 7, 8], [1, 2, 3, 4, 5, 6, 7, 8])
 
-puts "\n-------------\n"
+puts game.move(black_queen, 7, 5)
+puts game.move(black_queen, 1, 6)
+
+
+# puts "\nTesting the Pawn\n"
+# puts "Good Moves"
+
+# p black_pawn.can_move?(2, 5)
+# p black_pawn.can_move?(2, 4)
+# puts "Bad Moves"
+# p white_pawn.can_move?(2, 5)
+# p white_pawn.can_move?(5, 3)
+
+# puts "\n-------------\n"
+
+# p black_right_rook.pos_x
+
+# puts "\nTesting the Queen\n"
+# puts "Good Moves"
+
+# p black_queen.can_move?(7, 5)
+# p black_queen.can_move?(4, 6)
+# puts "Bad Moves"
+# p white_queen.can_move?(2, 4)
+# p white_queen.can_move?(5, 3)
+
+# puts "\n-------------\n"
 
 # puts "\nTesting the Knights\n"
 # puts "Good Moves"
