@@ -1,6 +1,8 @@
 #server.rb
 require "sinatra"
 
+require "artii"
+
 get "/" do 
 	"My first Sinatra app."
 end
@@ -31,4 +33,12 @@ get "/hours/ago/:num" do
 	@new_time = @current_time - (@num.to_i * 3600)
 
 	erb(:new_time)
+end
+
+get "/ascii/:font/:word" do 
+	@word = params[:word]
+	@font = params[:font]
+	@new_word = Artii::Base.new :font => @font
+	@final_word = @new_word.asciify(@word)
+	erb(:random_word)
 end
