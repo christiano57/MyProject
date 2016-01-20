@@ -35,7 +35,7 @@ get "/hours/ago/:num" do
 	erb(:new_time)
 end
 
-get "/ascii/:font/:word" do 
+get "/ascii/?:font/:word" do 
 	@word = params[:word]
 	@font = params[:font]
 	@new_word = Artii::Base.new :font => @font

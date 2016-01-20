@@ -1,0 +1,25 @@
+<h1>Nizar's T-Shirt Store</h1>
+
+<form action="/profile page" method="PUSH">
+	<input type="text" name="username" placeholder="username" >
+	<input type="text" name="password" placeholder="password" >
+	<button type="submit" name="login">Login</button>
+</form>
+
+<p>You have <%= @number_of_items %> items in your cart.</p>
+
+<a href="/checkout">
+  Checkout
+</a>
+
+<p>Our amazing products are:</p>
+
+<ul>
+  <% @shirts.each_with_index do |tshirt, i| %>
+    <li>
+      <a href="/tshirts/<%= i + 1 %>">
+        <%= tshirt %>
+      </a>
+    </li>
+  <% end %>
+</ul>
