@@ -1,0 +1,23 @@
+<h1>IMDB gem game</h1>
+
+<p>
+	The seach term <strong> <%= @term %> </strong> resulted in <%= @number_of_results %> movies.
+</p>
+
+<p>
+	Which of these movies came out in <%= @winner.year %>
+</p>
+	<h2>These are the movies that matched your search results </h2>
+<p>
+		 <% @list_of_movies.each do | movie | %>
+		 	<% if movie.title == @winner.title %>
+				<button onClick="alert('yay')"><image src=<%= movie.poster %> alt="<%= movie.title %>" height="240" width="200" ></button>
+				<% else %>
+				<button onClick="alert('nay')">
+				<image src=<%= movie.poster %> alt="<%= movie.title %>" height="240" width="200" ></button>
+				<% end %>
+
+			<% end %>
+</p>
+
+<a href="/">Try again?</a>
