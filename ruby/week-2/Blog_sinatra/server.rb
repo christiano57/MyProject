@@ -25,9 +25,24 @@ get "/postdetails/:index/" do
 	end
 
 get "/new_post" do
+	# x = 0
+	# x +=1
   erb(:post_form)
 end
 
-post "/upload successfull" do
-  
+post "/upload success" do
+	title = params[:title]
+	content = params[:content]
+	date = Time.new
+
+	Post.new(title, date, content)
+	erb(:upload_success)
 end
+
+
+
+
+
+
+
+
