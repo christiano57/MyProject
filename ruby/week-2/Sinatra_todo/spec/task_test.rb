@@ -16,9 +16,16 @@ describe Task do
 		end
 	end
 
-	describe "make_incomplete" do
+	describe "make_incomplete!" do
 	it "makes a task completed value false" do 
-		expect(@task.make_incomplete).to eq(false)
+		expect(@task.make_incomplete!).to eq(false)
+		end
+	end
+
+	describe "delete_task!" do
+	it "deletes task from array" do 
+		:full_list
+		expect(@todo.tasks.delete_task![0]).to eq([@todo.tasks])
 		end
 	end
 end

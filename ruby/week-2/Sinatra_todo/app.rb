@@ -1,13 +1,14 @@
-require_relative("lib/task.rb")
 
-task = Task.new("Buy the milk")
-puts task.id
-# 1
-task2 = Task.new("Wash the car")
-puts task2.id
-# 2
+require 'sinatra'
+require 'sinatra/reloader'
+# We're going to need to require our class files
+require_relative('lib/Task.rb')
+require_relative('lib/TodoList.rb')
 
-task.completed?
-# false
-task.complete!
-task.completed?
+todo_list = TodoList.new("Josh")
+# todo_list.load_tasks
+
+get "/tasks" do
+	erb(:tasks)
+end
+
