@@ -1,0 +1,47 @@
+.header {
+	color: #aaa;
+}
+
+.container {
+	margin: 50px;
+	width: 500px;
+	margin: 0 auto;
+	font-family: 'Roboto', sans-serif;
+	padding: 50px;
+	background-color: rgb(100,100,100);
+	}
+
+.panel {
+	background-color: rgb(230,230,230);
+}
+
+.post-title {
+	border-bottom: 1px solid rgb(150,150,150);
+}
+
+.glyphicon-knight {
+	color: blue;
+}
+
+.glyphicon-eur {
+	color: #f3ab4c;
+}
+
+.col-12 {
+	margin: 5px;
+}
+
+/*figure out how to change active button color*/
+.btn.btn-xs.red{
+	color: #f64f5a;
+	background-color: white;
+}
+
+.btn.btn-s {
+	color: #2889d8;
+	border-color: #2889d8;
+}
+
+.like {
+	margin: 5px;
+}
