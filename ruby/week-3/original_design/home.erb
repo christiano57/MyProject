@@ -8,33 +8,62 @@
 </head>
 <body>
 	<div class="container">
-	<p class="header"><span class="glyphicon glyphicon-knight"></span> <a href="profile.com">Knight</a> posted a new <a href="bounty.com">bounty</a>
-	</p>
-		<div class="panel">
-			<div class="col-12 post-title">
-				<img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Life_Preserver_no_shadow.svg" height="25px" width="25px">
-				Bounty <a href="example.com">#96</a> on <a href="example.com">Helpful</a>
+		<section class="bounty-panel">
+			<header class="header">
+				<span class="glyphicon glyphicon-knight"></span>
+				<a href="#">Knight</a> posted a new <a href="#">bounty</a>
+			</header>
+
+			<div class="panel">
+				<div class="panel-component post-title">
+					<img class="bounty-icon" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Life_Preserver_no_shadow.svg">
+					Bounty <a href="#">#96</a> on <a href="#">Helpful</a>
+				</div>
+				<div class="panel-component">
+					<ul class="panel-info-list list-inline">
+						<li>
+							<span class="glyphicon glyphicon-eur"></span>
+							<strong>3,444</strong>
+						</li>
+						<li>
+							<button class="btn btn-xs btn-default urgent" type="submit">
+								Now
+							</button>
+						</li>
+						<li>
+							<button class="btn btn-xs btn-default" type="submit">
+								HTML
+							</button>
+						</li>
+						<li>
+							<button class="btn btn-xs btn-default" type="submit">
+								CSS
+							</button>
+						</li>
+					</ul>
+				</div>
+				<div class="like">
+					<p>
+						<img src="http://www.placecage.com/g/200/300"
+								alt="nic cage like icon"
+								class="img-circle user-avatar">
+						<a href="#">JoelHynton</a>,
+						<a href="#">mdeiters</a>
+						and 112 others
+					</p>
+				</div>
+
+				<div class="panel-component">
+					<p>Make the category list a dropdown so that you don't break the layout.
+					</p>
+				</div>
+
+				<div class="comment">
+					<img src="http://www.fillmurray.com/g/155/300" alt="Bill Murray" class="img-circle" height="30" width="30"> <button class="btn btn-s btn-default" type="submit">Comment</button>&nbsp;
+				</div>
 			</div>
-			<div class="col-12">
-				<p><span class="glyphicon glyphicon-eur"> <strong>3,444</strong></span> &nbsp;
-				<button class="btn btn-xs btn-default red" type="submit">Now</button>&nbsp;
-				<button class="btn btn-xs btn-default" type="submit">HTML</button>&nbsp;
-				<button class="btn btn-xs btn-default" type="submit">CSS</button>&nbsp;
-				</p>
-			</div>
-			<div class="like">
-				<p>
-					<img src="http://www.placecage.com/g/200/300" alt="nic cage like icon" class="img-circle" height="25px" width="25px"> <a href="example.com">JoelHynton</a>, <a href="example.com">mdeiters</a> and 112 others
-				</p>
-			</div>
-			<div class="col-12">
-				<p>Make the category list a dropdown so that you don't break the layout.
-				</p>
-			</div>
-			<div class="comment">
-				<img src="http://www.fillmurray.com/g/155/300" alt="Bill Murray" class="img-circle" height="30" width="30"> <button class="btn btn-s btn-default" type="submit">Comment</button>&nbsp;
-			</div>
-		</div>
+		</section>
+
 <div class="panel">
 			<div class="col-12 post-title">
 				<img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Life_Preserver_no_shadow.svg" height="25px" width="25px">
@@ -81,7 +110,7 @@
 				<p>Make the category list a dropdown so that you don't break the layout.
 				</p>
 			</div>
-			<div class="comment">
+			<div class="comment" id="important-section-of-the-page">
 				<img src="http://www.fillmurray.com/g/155/300" alt="Bill Murray" class="img-circle" height="30" width="30"> <button class="btn btn-s btn-default" type="submit">Comment</button>&nbsp;
 			</div>
 		</div>
