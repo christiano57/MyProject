@@ -27,14 +27,34 @@
 	color: #f3ab4c;
 }
 
-.col-12 {
+.panel-component {
 	margin: 5px;
 }
 
-/*figure out how to change active button color*/
-.btn.btn-xs.red{
+.bounty-icon,
+.user-avatar {
+	width: 25px;
+	height: 25px;
+}
+
+
+/*
+<tag class="panel-info-list">
+	<li></li>
+</tag>
+*/
+.panel-info-list > li {
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+.btn.btn-xs.urgent {
 	color: #f64f5a;
 	background-color: white;
+}
+
+.btn.btn-xs.urgent:focus {
+	outline: 5px auto #f64f5a;
 }
 
 .btn.btn-s {
