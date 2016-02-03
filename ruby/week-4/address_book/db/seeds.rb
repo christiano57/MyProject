@@ -6,6 +6,12 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Contact.create(name: 'Johanna', address: '1234 Miami, FL', phone_number: '3057869541' email: 'Johanna@example.com')
-Contact.create(name: 'mom', address: '5678 Montevideo, UY', phone_number: '5980017410' email: 'mom@example.com')
-Contact.create(name: 'dad', address: '1234 Miami, FL', phone_number: '5983257510' email: 'dad@example.com')
+contact_list = [
+	["jon doe", "123 sesame st", "5555555555", "jon@doe.com"],
+	["jane doe", "123 sesame st", "5555555555", "jane@doe.com"],
+	["big bird", "123 sesame st", "5555555555", "bigbird@sesame.com"]
+]
+
+contact_list.each do |person|
+	Contact.create( name: person[0], address: person[1], phone_number: person[2], email: person[3])
+end
