@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MusicConcertNetwork</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+	<%= render "layouts/header" %>
+		
+		<div class="col-md-3">
+			<ul>
+				<li>one item</li>
+				<li>two item</li>
+				<li>three item</li>				
+			</ul>
+		</div>
+		<div class="col-md-9">
+			<%=yield %>
+		</div>
+	<%= render "layouts/footer" %>
+</div>
+</body>
+</html>
