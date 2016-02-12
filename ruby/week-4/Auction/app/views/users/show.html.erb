@@ -1,0 +1,10 @@
+<h1>Hi <%= @user.name %>, this is your user page!</h1>
+
+<h2>Check out your items:</h2>
+	<ul>
+		<% @products.each do | product | %>
+	 		<li>
+	 			<%= product.title %>
+	 		</li>
+	 	<% end %>
+	</ul>

@@ -6,12 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-
-10.times do |i| 
-	p = Project.create name: 'Recipes', description: 'Track my favorite recipes'
-	if i.odd?
-		p.entries.create(minutes: 10 * i, hours: 1 * i)
-	else
-		p.entries.create(minutes: i, hours: i)
-	end
-end
+user1 = User.create(name: 'Joffrey', email: 'kingjoff@theredkeep.com')
+user2 = User.create(name: 'Jon Snow', email: 'knownothing@castleblack.com')
+product1 = Product.create(title: 'crossbow', description: 'its great for scaring people', deadline: Date.new + 1.hour, user_id: 1)

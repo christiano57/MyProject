@@ -1,0 +1,36 @@
+.covercontain {
+	max-height: 320px;
+	overflow: hidden;
+}
+
+.navbar {
+	max-width: 100%;
+}
+
+.coverimg {
+	width: 100%;
+	overflow: hidden;
+	height: auto;
+}
+
+.search {
+	float: right;
+}
+
+.dropdown-toggle {
+	float: right;
+}
+
+.profilepic {
+	height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 155px;
+    left: 40px;
+}
+
+.profileinfo {
+	width: 200px;
+	position: relative;
+	left: 30px
+}

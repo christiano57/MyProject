@@ -1,0 +1,2 @@
+      invoke  active_record
+      create    db/migrate/20160204211009_remove_column_from_users.rb
