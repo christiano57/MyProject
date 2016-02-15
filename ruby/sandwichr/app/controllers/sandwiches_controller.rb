@@ -43,6 +43,8 @@ class SandwichesController < ApplicationController
 		sandwich = Sandwich.find_by(id: params[:id])
 		ingredient = Ingredient.find_by(id: params[:ingredient_id])
 		@new_sanchwich = sandwich.ingredients.push(ingredient)
+		@total_cal = sandwich.total_calories + ingredient.calories
+		sandwich.update(id: params[:id], :total_calories => @total_cal)
 		render json: sandwich.to_json(:include => :ingredients)
 	end
 private
