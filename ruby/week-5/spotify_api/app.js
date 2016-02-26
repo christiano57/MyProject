@@ -2,15 +2,17 @@
 
 $(document).on("ready", function () { 
 	$('.js-submit').on('click', onSubmit);
+	printTime();
 });
 
 // ------------- DEFINITIONS ---------------
 
 	function onSubmit (event) {
 		event.preventDefault();
+		console.log(event);
 		var searchTerm = $('.js-searchterm').val();
 		fetchResults (searchTerm);
-	};	
+	};
 
 function fetchResults (term) {
 	$.ajax({
@@ -46,3 +48,11 @@ function displayResults (results) {
 	results.forEach(showResult); 
 			
 };
+
+function printTime () {
+  var current = $('.js-player').prop('currentTime');
+  console.debug('Current time: ' + current);
+}
+
+// Have printTime be called when the time is updated
+$('.js-player').on('timeupdate', printTime);
